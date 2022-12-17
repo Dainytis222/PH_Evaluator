@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Scanner;
@@ -12,11 +13,8 @@ public class Main {
     int player2Wins = 0;
     int draw = 0;
 
-//    URL allHands = new URL("https://projecteuler.net/project/resources/p054_poker.txt");
-//    Scanner sc = new Scanner(allHands.openStream());
-
-    File allHands = new File("/Users/dainytis/Documents/Front-End/Mano/Poker/src/p054_poker.txt");
-    Scanner sc = new Scanner(allHands);
+    URL allHands = new URL("https://projecteuler.net/project/resources/p054_poker.txt");
+    Scanner sc = new Scanner(allHands.openStream());
 
     while (sc.hasNextLine()) {
 
