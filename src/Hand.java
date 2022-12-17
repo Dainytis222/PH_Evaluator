@@ -22,7 +22,9 @@ public class Hand {
     long result = 0;
     if (card11 == card22 && card22 == card33 && card33 == card44 && card44 == card55 &&
         card1 == 14 && card5 == 10) {
-      result = royalFlash + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
+      result =
+          royalFlash + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100)
+              + card5;
     }
     return result;
   }
@@ -44,10 +46,13 @@ public class Hand {
 
     if ((card11 == card22 && card22 == card33 && card33 == card44 && card44 == card55) && (
         card1 <= 13 && card5 == card1 - 4)) {
-      result = straightFlash + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
+      result =
+          straightFlash + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100)
+              + card5;
     } else if ((card11 == card22 && card22 == card33 && card33 == card44 && card44 == card55)
         && (card1 == 14 && card2 == 5 && card5 == 2)) {
-      result = straightFlash + 100000000 + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
+      result =
+          straightFlash + 100000000 + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
     }
     return result;
   }
@@ -63,9 +68,13 @@ public class Hand {
     long result = 0;
 
     if (card1 == card4) {
-      result = fourOfKind + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
-    } else if (card2 == card5){
-      result = fourOfKind + (card2 * 100000000) + (card3 * 1000000) + (card4 * 10000) + (card5 * 100) + card1;
+      result =
+          fourOfKind + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100)
+              + card5;
+    } else if (card2 == card5) {
+      result =
+          fourOfKind + (card2 * 100000000) + (card3 * 1000000) + (card4 * 10000) + (card5 * 100)
+              + card1;
     }
     return result;
   }
@@ -81,9 +90,11 @@ public class Hand {
     long result = 0;
 
     if (card1 == card3 && card4 == card5) {
-      result = fullHouse + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
-    } else if (card1 == card2 && card3 == card5){
-      result = fullHouse + (card3 * 100000000) + (card4 * 1000000) + (card5 * 10000) + (card1 * 100) + card2;
+      result = fullHouse + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100)
+          + card5;
+    } else if (card1 == card2 && card3 == card5) {
+      result = fullHouse + (card3 * 100000000) + (card4 * 1000000) + (card5 * 10000) + (card1 * 100)
+          + card2;
     }
     return result;
   }
@@ -141,11 +152,17 @@ public class Hand {
     long result = 0;
 
     if (card1 == card3) {
-      result = threeOfKind + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
-    } else if (card2 == card4){
-      result = threeOfKind + (card2 * 100000000) + (card3 * 1000000) + (card4 * 10000) + (card1 * 100) + card5;
-    } else if (card3 == card5){
-      result = threeOfKind + (card3 * 100000000) + (card4 * 1000000) + (card5 * 10000) + (card1 * 100) + card2;
+      result =
+          threeOfKind + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100)
+              + card5;
+    } else if (card2 == card4) {
+      result =
+          threeOfKind + (card2 * 100000000) + (card3 * 1000000) + (card4 * 10000) + (card1 * 100)
+              + card5;
+    } else if (card3 == card5) {
+      result =
+          threeOfKind + (card3 * 100000000) + (card4 * 1000000) + (card5 * 10000) + (card1 * 100)
+              + card2;
     }
     return result;
   }
@@ -161,16 +178,19 @@ public class Hand {
     long result = 0;
 
     if (card1 == card2 && card3 == card4) {
-      result = twoPair + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
-    } else if (card1 == card2 && card4 == card5){
-      result = twoPair + (card1 * 100000000) + (card2 * 1000000) + (card4 * 10000) + (card5 * 100) + card3;
-    } else if (card2 == card3 && card4 == card5){
-      result = twoPair + (card2 * 100000000) + (card3 * 1000000) + (card4 * 10000) + (card5 * 100) + card1;
+      result = twoPair + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100)
+          + card5;
+    } else if (card1 == card2 && card4 == card5) {
+      result = twoPair + (card1 * 100000000) + (card2 * 1000000) + (card4 * 10000) + (card5 * 100)
+          + card3;
+    } else if (card2 == card3 && card4 == card5) {
+      result = twoPair + (card2 * 100000000) + (card3 * 1000000) + (card4 * 10000) + (card5 * 100)
+          + card1;
     }
     return result;
   }
 
-  public  long isOnePair() {
+  public long isOnePair() {
     int card1 = hand[0].getRank();
     int card2 = hand[1].getRank();
     int card3 = hand[2].getRank();
@@ -181,7 +201,8 @@ public class Hand {
     long result = 0;
 
     if (card1 == card2 || card2 == card3 || card3 == card4 || card4 == card5) {
-      result = onePair + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
+      result = onePair + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100)
+          + card5;
     }
     return result;
   }
@@ -198,51 +219,51 @@ public class Hand {
     return result;
   }
 
-  public long highestCombination(){
+  public long highestCombination() {
     long result = 0;
 
     result = this.isRoyalFlash();
-    if (result != 0){
+    if (result != 0) {
       return result;
     }
 
     result = this.isStraightFlash();
-    if (result != 0){
+    if (result != 0) {
       return result;
     }
 
     result = this.isFourOfKind();
-    if (result != 0){
+    if (result != 0) {
       return result;
     }
 
     result = this.isFullHouse();
-    if (result != 0){
+    if (result != 0) {
       return result;
     }
 
     result = this.isFlash();
-    if (result != 0){
+    if (result != 0) {
       return result;
     }
 
     result = this.isStraight();
-    if (result != 0){
+    if (result != 0) {
       return result;
     }
 
     result = this.isThreeOfKind();
-    if (result != 0){
+    if (result != 0) {
       return result;
     }
 
     result = this.isTwoPair();
-    if (result != 0){
+    if (result != 0) {
       return result;
     }
 
     result = this.isOnePair();
-    if (result != 0){
+    if (result != 0) {
       return result;
     }
 

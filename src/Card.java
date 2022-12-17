@@ -1,4 +1,4 @@
-public class Card implements Comparable<Card>{
+public class Card implements Comparable<Card> {
 
   private int rank;
   private int suit;
@@ -25,14 +25,13 @@ public class Card implements Comparable<Card>{
         .replace("D", "3")
         .replace("C", "4");
 
-
-
     this.rank = Integer.parseInt(rank);
-    this.suit = Integer.parseInt(suit);;
-
+    this.suit = Integer.parseInt(suit);
+    ;
   }
 
-  @Override public String toString() {
+  @Override
+  public String toString() {
     return "Card: rank='" + rank + "', suit='" + suit + "'";
   }
 
