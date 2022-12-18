@@ -14,6 +14,10 @@ public class Main {
     int draw = 0;
 
     URL allHands = new URL("https://projecteuler.net/project/resources/p054_poker.txt");
+
+//    Scanner sc = new Scanner(new File("/Users/dainytis/Documents/Front-End/Mano/Poker/src/TestHands.txt"));
+   // test file
+
     Scanner sc = new Scanner(allHands.openStream());
 
     while (sc.hasNextLine()) {
