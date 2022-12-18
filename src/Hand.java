@@ -131,10 +131,10 @@ public class Hand {
     long straight = 40000000000L;
     long result = 0;
 
-    if (card1 <= 14 && card5 == card1 - 4) {
+    if (card1 <= 14 && card2 == card1 - 1 && card3 == card1 - 2 && card4 == card1 - 3 && card5 == card1 - 4) {
       result = straight + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100)
           + card5;
-    } else if ((card1 == 14 && card2 == 5 && card5 == 2)) {
+    } else if ((card1 == 14 && card2 == 5 && card3 == 4 && card4 == 3 && card5 == 2)) {
       result = straight + 100000000 + (card2 * 1000000) + (card3 * 10000) + (card4 * 100) + card5;
     }
     return result;
@@ -200,9 +200,18 @@ public class Hand {
     long onePair = 10000000000L;
     long result = 0;
 
-    if (card1 == card2 || card2 == card3 || card3 == card4 || card4 == card5) {
+    if (card1 == card2) {
       result = onePair + (card1 * 100000000) + (card2 * 1000000) + (card3 * 10000) + (card4 * 100)
           + card5;
+    }  else if (card2 == card3) {
+      result = onePair + (card2 * 100000000) + (card3 * 1000000) + (card1 * 10000) + (card4 * 100)
+          + card5;
+    } else if (card3 == card4) {
+      result = onePair + (card3 * 100000000) + (card4 * 1000000) + (card1 * 10000) + (card2 * 100)
+          + card5;
+    } else if (card4 == card5) {
+      result = onePair + (card4 * 100000000) + (card5 * 1000000) + (card1 * 10000) + (card2 * 100)
+          + card3;
     }
     return result;
   }
